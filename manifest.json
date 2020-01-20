@@ -1,0 +1,23 @@
+{
+    "name": "Youtube Chrome QR Generator",
+    "version": "1.0",
+    "description": "Fast Opener Video for Mobile Phones!",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.youtube.com/watch?v=*"],
+          "js": ["contentScript.js", "qrcode.min.js"]
+        }
+    ],
+    "permissions": ["webNavigation","activeTab","tabs", "http://*/*", "https://*/*"],
+    "icons": {
+        "16": "images/16.png",
+        "32": "images/32.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "manifest_version": 2
+  }
